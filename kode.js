@@ -11,8 +11,7 @@ function daysSince(datetimeString) {
 
 function regn_ut(){
   var input = document.getElementById('bursdag');
-  var days = daysSince(input.value);
-  var dagar = daysSince(days);
+  var dagar = daysSince(input.value);
   let melding = "Du er " + dagar + " dagar gamal.";
   document.getElementById("dagar").innerHTML = melding;
 }
