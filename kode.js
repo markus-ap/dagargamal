@@ -5,13 +5,17 @@ function daysSince(datetimeString) {
   var now = new Date();
   // Calculate the difference in milliseconds
   var diff = now - datetime;
+  
+  var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  
   // Convert the difference to days and return the result
-  return Math.floor(diff / (1000 * 60 * 60 * 24));
+  return "Du er " + days + " dagar, " + hours + " timar, og " + minutes + " minutt gamal.";
 }
 
 function regn_ut(){
   var input = document.getElementById('bursdag');
-  var dagar = daysSince(input.value);
-  let melding = "Du er " + dagar + " dagar gamal.";
+  var melding = daysSince(input.value);
   document.getElementById("dagar").innerHTML = melding;
 }
