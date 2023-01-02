@@ -13,5 +13,6 @@ function regn_ut(){
   var input = document.getElementById('bursdag');
   var days = daysSince(input.value);
   var dagar = daysSince(days);
-  document.getElementById("dagar").innerHTML = dagar + " dagar";
+  let melding = "Du er " + dagar + " dagar gamal.";
+  document.getElementById("dagar").innerHTML = melding;
 }
