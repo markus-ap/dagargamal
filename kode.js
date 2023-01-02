@@ -11,7 +11,7 @@ function daysSince(datetimeString) {
   var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   
   // Convert the difference to days and return the result
-  return "Du er " + days + " dagar, " + hours + " timar, og " + minutes + " minutt gamal.";
+  return "Du er " + days + " dagar gamal.";
 }
 
 function regn_ut(){
